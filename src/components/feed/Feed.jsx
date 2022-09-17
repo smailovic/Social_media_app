@@ -1,13 +1,14 @@
 import React from "react";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import SentimentSatisfiedOutlinedIcon from "@mui/icons-material/SentimentSatisfiedOutlined";
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import GifBoxOutlinedIcon from "@mui/icons-material/GifBoxOutlined";
 import SendIcon from "@mui/icons-material/Send";
+import { Users } from "../../DummyData";
 
-export default function Feed() {
+export default function Feed({ post }) {
   return (
     <div className="mt-3 bg-white  rounded">
       <div className=" d-flex justify-content-between">
@@ -15,12 +16,12 @@ export default function Feed() {
           <div className="mx-2 col-md-2">
             <img
               className="my-2 rounded-circle img-fluid"
-              src="assets/profile.jpg"
+              src={Users.filter((u) => u.id === post.userId)[0].profilepic}
               alt="here imaage"
             />
           </div>
           <div className="mx-3 my-2">
-            <div>smael draoui</div>
+            <div>{Users.filter((u) => u.id === post.userId)[0].username}</div>
             <div className="text-muted">9 sept 2022</div>
           </div>
         </div>
@@ -29,16 +30,12 @@ export default function Feed() {
         </div>
       </div>
       <div className="container">
-        <img
-          className="img-fluid rounded"
-          src="assets/friends_img.jpg"
-          alt=""
-        />
+        <img className="img-fluid rounded" src={post.photo} alt="" />
       </div>
       <div className="d-flex justify-content-between mx-2">
-        <div className="">profil icons of likes</div>
+        <div className="">{post.like} likes </div>
         <div className="d-flex">
-          <div className="mx-1">3 Comments</div>
+          <div className="mx-1">{post.comment} Comments</div>
           <div className="mx-1">17 Shares</div>
         </div>
       </div>
@@ -46,7 +43,7 @@ export default function Feed() {
       <div className="mx-1 d-flex justify-content-between">
         <div className="">
           <span>
-            <FavoriteBorderIcon />
+            <FavoriteIcon style={{ color: "#ff1744" }} />
           </span>
           like
         </div>

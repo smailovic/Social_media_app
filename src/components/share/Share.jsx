@@ -17,7 +17,7 @@ export default function Share() {
           </div>
           <div className=" my-auto col-9 ">
             <input
-              className="rounded border-0 w-100"
+              className="rounded border-0 w-100 form-control form-control-sm"
               type="text"
               placeholder="Type something ..."
             />

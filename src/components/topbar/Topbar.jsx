@@ -18,7 +18,7 @@ export default function Topbar() {
           <div className="col-md-5  p-2">
             {" "}
             <input
-              className=" border-0 rounded w-100"
+              className=" border-0 rounded w-100 form-control form-control-sm"
               type="text"
               placeholder="search for posts, picture or video"
             />

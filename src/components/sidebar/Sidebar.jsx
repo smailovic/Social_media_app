@@ -10,10 +10,10 @@ import LogoutIcon from "@mui/icons-material/Logout";
 
 export default function sidebar() {
   return (
-    <div className="position-fixed bg-white  ">
+    <div className="scroll position-fixed bg-white  ">
       <div className="rounded px-4">
-        <div className="my-2 text-center">
-          <span>
+        <div className="my-2 ">
+          <span className="">
             <DynamicFeedIcon />
           </span>{" "}
           Feed
@@ -24,37 +24,37 @@ export default function sidebar() {
           </span>{" "}
           My community
         </div>
-        <div className="my-4 text-center">
+        <div className="my-4 ">
           <span>
             <ChatIcon />
           </span>{" "}
           messages
         </div>
-        <div className="my-4 text-center">
+        <div className="my-4 ">
           <span>
             <NotificationsNoneIcon />
           </span>{" "}
           notifications
         </div>
-        <div className="my-4 text-center">
+        <div className="my-4 ">
           <span>
             <ExploreIcon />
           </span>{" "}
           explore
         </div>
-        <div className="my-4 text-center">
+        <div className="my-4 ">
           <span>
             <AccountCircleIcon />
           </span>{" "}
           profile
         </div>
-        <div className="my-4 text-center">
+        <div className="my-4 ">
           <span>
             <SettingsIcon />
           </span>{" "}
           settings
         </div>
-        <div className="my-4 text-center">
+        <div className="my-4 ">
           <span>
             <LogoutIcon />
           </span>{" "}
