@@ -26,7 +26,9 @@ export default function Feed({ post }) {
           </div>
         </div>
         <div className="mx-2">
-          <h4>...</h4>
+          <div className="">
+            <h4>...</h4>
+          </div>
         </div>
       </div>
       <div className="container">
@@ -63,9 +65,9 @@ export default function Feed({ post }) {
       <hr className="mx-2" />
       <div className="d-flex justify-content-between my-2">
         <div className="">profil</div>
-        <div className="mx-2">
+        <div className="mx-2 d-flex justify-content-between">
           <input
-            className="rounded"
+            className="rounded form-control form-control-sm"
             placeholder="type something..."
             type="text"
           />

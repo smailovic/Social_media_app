@@ -10,7 +10,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 
 export default function sidebar() {
   return (
-    <div className="scroll position-fixed bg-white  ">
+    <div className="scroll  bg-white  ">
       <div className="rounded px-4">
         <div className="my-2 ">
           <span className="">

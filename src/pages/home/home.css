@@ -1,0 +1,7 @@
+@media (min-width: 992px) {
+  /* .feed-cards{ */
+  /* display:none;}*/
+}
+.sidebar,.rightbar {
+  display: none;
+}
