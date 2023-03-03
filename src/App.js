@@ -1,10 +1,10 @@
-import Home from "./pages/home/Home";
+import Auth from './components/Auth';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Home />
+        <Auth />
       </header>
     </div>
   );

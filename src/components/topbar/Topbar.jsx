@@ -1,41 +1,95 @@
-import React from "react";
+import React from 'react';
+import { BiLogOutCircle } from 'react-icons/bi';
+import { AiOutlineNotification } from 'react-icons/ai';
+import { RiSearchLine } from 'react-icons/ri';
 
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-import SearchIcon from "@mui/icons-material/Search";
-
-export default function Topbar() {
+export default function Topbar(props) {
+  console.log('logout topbar');
+  console.log(props.logout);
   return (
-    <div className="sticky-top bg-white">
-      <div className="d-flex align-items-center ">
-        <div className=" p-2">
-          <AccountBalanceIcon />
-          Smapp
+    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div className="container-fluid">
+        <a className="navbar-brand d-flex align-items-center" href="/">
+          <span className="ms-2 fw-bold">Smapp</span>
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <form className="d-flex col-md-5">
+            <div className="input-group d-flex align-items-center">
+              <span className="bg-transparent  mx-2 border-0">
+                <RiSearchLine />
+              </span>
+              <input
+                className="form-control  border my-auto
+                 rounded-0"
+                type="search"
+                placeholder="Search for posts, pictures, or videos"
+                aria-label="Search"
+              />
+            </div>
+          </form>
         </div>
-        <div className="   justify-content-center d-flex align-items-center flex-grow-1">
-          <div className="p-2 ">
-            <SearchIcon />
+        <div className="d-flex align-items-center">
+          <button className="btn  text-primary me-2">
+            <AiOutlineNotification className="me-2" />
+          </button>
+          <div className="dropdown">
+            <button
+              className="btn btn-outline-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Layt Yagami
+            </button>
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <button className="dropdown-item" type="button">
+                  Profile
+                </button>
+              </li>
+              <li>
+                <button className="dropdown-item" type="button">
+                  Settings
+                </button>
+              </li>
+              <li>
+                <hr className="dropdown-divider" />
+              </li>
+              <li>
+                <button
+                  onClick={props.logout}
+                  className="dropdown-item"
+                  type="button"
+                >
+                  <BiLogOutCircle className="me-2" />
+                </button>
+              </li>
+            </ul>
           </div>
-          <div className="col-md-5  p-2">
-            {" "}
-            <input
-              className=" border-0 rounded w-100 form-control form-control-sm"
-              type="text"
-              placeholder="search for posts, picture or video"
-            />
-          </div>
-        </div>
-
-        <div className=" col-md-2 p-1 mx-2 ">
-          <div>
-            <span className="mx-2 p-2 text-warning">Layt yagami</span>
-            <img
-              className="img-fluid  w-25 rounded-circle"
-              src="assets/profile.jpg"
-              alt=" a pic was here"
-            />
-          </div>
+          <img
+            className="rounded-circle ms-2"
+            src="assets/profile.jpg"
+            alt="Profile"
+            width="40"
+            height="40"
+          />
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

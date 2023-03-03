@@ -1,17 +1,19 @@
-import React from "react";
-import Rightbar from "./../../components/rightbar/Rightbar";
+import React from 'react';
+import Rightbar from './../../components/rightbar/Rightbar';
 
-import Sidebar from "./../../components/sidebar/Sidebar";
-import Topbar from "./../../components/topbar/Topbar";
-import Feed from "./../../components/feed/Feed";
-import Share from "./../../components/share/Share";
-import FeedCards from "../../components/feed/FeedCards";
-import { Posts } from "../../DummyData";
-import "./home.css";
-export default function home() {
+import Sidebar from './../../components/sidebar/Sidebar';
+import Topbar from './../../components/topbar/Topbar';
+import Feed from './../../components/feed/Feed';
+import Share from './../../components/share/Share';
+import FeedCards from '../../components/feed/FeedCards';
+import { Posts } from '../../DummyData';
+import './home.css';
+export default function home(props) {
+  console.log('logout');
+  console.log(props.logoutHandler);
   return (
     <div className="container-fluid">
-      <Topbar />
+      <Topbar logout={props.logoutHandler} />
       <div className="row mt-2 bg-light bg-gradient ">
         <div className="col-2  ">
           <div className="sidebar">
@@ -32,9 +34,9 @@ export default function home() {
             </div>
           </div>
           <div className="col-3 rightbar">
-            {" "}
+            {' '}
             <Rightbar />
-          </div>{" "}
+          </div>{' '}
         </div>
       </div>
     </div>

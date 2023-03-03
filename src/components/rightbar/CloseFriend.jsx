@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function CloseFriend({ user }) {
   return (
@@ -11,7 +11,7 @@ export default function CloseFriend({ user }) {
         />
         <span className="mx-1">{user.username}</span>
         <span className="mx-1">
-          {" "}
+          {' '}
           <small className="text-muted">{user.time} min</small>
         </span>
       </div>

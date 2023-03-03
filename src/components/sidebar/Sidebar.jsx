@@ -1,12 +1,12 @@
-import React from "react";
-import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
-import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
-import ChatIcon from "@mui/icons-material/Chat";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import ExploreIcon from "@mui/icons-material/Explore";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import SettingsIcon from "@mui/icons-material/Settings";
-import LogoutIcon from "@mui/icons-material/Logout";
+import React from 'react';
+import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
+import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
+import ChatIcon from '@mui/icons-material/Chat';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import ExploreIcon from '@mui/icons-material/Explore';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export default function sidebar() {
   return (
@@ -15,49 +15,49 @@ export default function sidebar() {
         <div className="my-2 ">
           <span className="">
             <DynamicFeedIcon />
-          </span>{" "}
+          </span>{' '}
           Feed
         </div>
-        <div className="my-4 text-center">
+        <div className="my-4 ">
           <span>
             <PeopleRoundedIcon />
-          </span>{" "}
+          </span>{' '}
           My community
         </div>
         <div className="my-4 ">
           <span>
             <ChatIcon />
-          </span>{" "}
+          </span>{' '}
           messages
         </div>
         <div className="my-4 ">
           <span>
             <NotificationsNoneIcon />
-          </span>{" "}
+          </span>{' '}
           notifications
         </div>
         <div className="my-4 ">
           <span>
             <ExploreIcon />
-          </span>{" "}
+          </span>{' '}
           explore
         </div>
         <div className="my-4 ">
           <span>
             <AccountCircleIcon />
-          </span>{" "}
+          </span>{' '}
           profile
         </div>
         <div className="my-4 ">
           <span>
             <SettingsIcon />
-          </span>{" "}
+          </span>{' '}
           settings
         </div>
         <div className="my-4 ">
           <span>
             <LogoutIcon />
-          </span>{" "}
+          </span>{' '}
           Logout
         </div>
       </div>
